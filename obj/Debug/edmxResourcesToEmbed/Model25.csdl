@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Agentii2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Agentii_Table">
+    <Key>
+      <PropertyRef Name="NrCrt" />
+    </Key>
+    <Property Name="NrCrt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Agentie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Intrare" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Iesire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Explicatii" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataOra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sold" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UltimaOp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Zile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Functie">
+    <Key>
+      <PropertyRef Name="ID_NumeFunctie" />
+    </Key>
+    <Property Name="ID_NumeFunctie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Membriis" Relationship="Self.FK_Membrii_Functie" FromRole="Functie" ToRole="Membrii" />
+  </EntityType>
+  <EntityType Name="Membrii">
+    <Key>
+      <PropertyRef Name="ID_Username" />
+    </Key>
+    <Property Name="ID_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prenume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_NumeFunctie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Functie" Relationship="Self.FK_Membrii_Functie" FromRole="Membrii" ToRole="Functie" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Membrii_Functie">
+    <End Role="Functie" Type="Self.Functie" Multiplicity="0..1" />
+    <End Role="Membrii" Type="Self.Membrii" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Functie">
+        <PropertyRef Name="ID_NumeFunctie" />
+      </Principal>
+      <Dependent Role="Membrii">
+        <PropertyRef Name="ID_NumeFunctie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Agentii2Entities25" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Agentii_Table" EntityType="Self.Agentii_Table" />
+    <EntitySet Name="Functies" EntityType="Self.Functie" />
+    <EntitySet Name="Membriis" EntityType="Self.Membrii" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Membrii_Functie" Association="Self.FK_Membrii_Functie">
+      <End Role="Functie" EntitySet="Functies" />
+      <End Role="Membrii" EntitySet="Membriis" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

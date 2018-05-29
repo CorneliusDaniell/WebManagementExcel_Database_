@@ -1,0 +1,15 @@
+﻿body {
+}
+
+input[type="text"],input[type="email"],input[type="password"],input[type="submit"]{
+    margin-top:10px;
+}
+
+h2{
+    font-family: 'Amatic SC', cursive;
+    font-size:50px;
+}
+
+.control-label{
+    text-align:left!important;
+}

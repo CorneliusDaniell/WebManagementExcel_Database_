@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArtClubModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BalantaContClub">
+    <Key>
+      <PropertyRef Name="ID_BalantaContClub" />
+    </Key>
+    <Property Name="ID_BalantaContClub" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Plata" Type="Int32" />
+    <Property Name="Nume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_DataCalendarDisp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CalendarDisp">
+    <Key>
+      <PropertyRef Name="ID_DataCalenarDisp" />
+    </Key>
+    <Property Name="ID_DataCalenarDisp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Eveniment">
+    <Key>
+      <PropertyRef Name="ID_NumeEveniment" />
+    </Key>
+    <Property Name="ID_NumeEveniment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_NumeResursa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Functie">
+    <Key>
+      <PropertyRef Name="ID_NumeFunctie" />
+    </Key>
+    <Property Name="ID_NumeFunctie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locatii">
+    <Key>
+      <PropertyRef Name="ID_NumeLocatie" />
+    </Key>
+    <Property Name="ID_NumeLocatie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Membrii">
+    <Key>
+      <PropertyRef Name="ID_Username" />
+    </Key>
+    <Property Name="ID_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prenume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_NumeFunctie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_NumeEveniment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Resurse">
+    <Key>
+      <PropertyRef Name="ID_NumeResursa" />
+    </Key>
+    <Property Name="ID_NumeResursa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_DataCalendarDisp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="ID_NumeStatus" />
+    </Key>
+    <Property Name="ID_NumeStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Agentii2Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BalantaContClubs" EntityType="Self.BalantaContClub" />
+    <EntitySet Name="CalendarDisps" EntityType="Self.CalendarDisp" />
+    <EntitySet Name="Eveniments" EntityType="Self.Eveniment" />
+    <EntitySet Name="Functies" EntityType="Self.Functie" />
+    <EntitySet Name="Locatiis" EntityType="Self.Locatii" />
+    <EntitySet Name="Membriis" EntityType="Self.Membrii" />
+    <EntitySet Name="Resurses" EntityType="Self.Resurse" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,122 @@
+﻿@model WebManagementExcelDatabase.Membriimetadata2
+
+@{
+    ViewBag.Title = "UserRegistration";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/LoginRegister.css")" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <title>Index</title>
+</head>
+
+<body style="background-image:url(../../Content/img/art1.jpg ); background-size:cover;">
+
+
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+
+            @Html.ValidationSummary(true)
+
+            <div class="col-md-12">
+                <div class="row" style="text-align:center">
+                    <h2 style="margin-bottom:25px;">Inregistreaza-te</h2>
+                    <div class="col-md-6" style="margin-top:40px; ">
+
+                        <div class="form-group">
+
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                @Html.LabelFor(model => model.Nume, new { @class = "control-label col-md-2" })
+                                @Html.TextBoxFor(model => model.Nume, new { @placeholder = "Nume", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Nume)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                @Html.LabelFor(model => model.Prenume, new { @class = "control-label col-md-2" })
+                                @Html.TextBoxFor(model => model.Prenume, new { @placeholder = "Prenume", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Prenume)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+                                @Html.TextBoxFor(model => model.Email, new { @placeholder = "Email", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Email)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                @Html.LabelFor(model => model.ID_NumeFunctie, new { @class = "control-label col-md-2" })
+                                @*@Html.DropDownList("ID_NumeFunctie", String.Empty)*@
+                                @Html.DropDownList("ID_NumeFunctie", (IEnumerable<SelectListItem>)ViewBag.ID_NumeFunctie, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ID_NumeFunctie)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-top:40px; ">
+                        <div class="form-group">
+
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                @Html.LabelFor(model => model.Username, new { @class = "control-label col-md-2" })
+                                @Html.TextBoxFor(model => model.Username, new { @placeholder = "Username", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Username)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+                                @Html.TextBoxFor(model => model.Password, new { @placeholder = "Parola", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Password)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                @Html.LabelFor(model => model.RPassword, new { @class = "control-label col-md-12" })
+                                @Html.TextBoxFor(model => model.RPassword, new { @placeholder = "Parola", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.RPassword)
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-6" style="margin:0 auto;float:none;">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+    }
+
+
+</body>
+
+</html>

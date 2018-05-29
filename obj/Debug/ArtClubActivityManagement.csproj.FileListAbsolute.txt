@@ -1,0 +1,94 @@
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.dll.config
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.pdb
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.SqlServer.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\Newtonsoft.Json.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Linq.Dynamic.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Net.Http.Formatting.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Helpers.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.WebHost.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Mvc.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Razor.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Deployment.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Razor.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.SqlServer.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\Newtonsoft.Json.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Net.Http.Formatting.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.WebHost.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Razor.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Deployment.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Razor.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Helpers.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Mvc.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.pdb
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.csprojResolveAssemblyReference.cache
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\ArtClubActivityManagement\bin\Unit.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.csprojResolveAssemblyReference.cache
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.dll.config
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.pdb
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\Newtonsoft.Json.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Linq.Dynamic.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Net.Http.Formatting.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Helpers.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.WebHost.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Razor.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Razor.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\Unit.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\Newtonsoft.Json.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Net.Http.Formatting.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.WebHost.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Razor.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Razor.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Helpers.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.pdb
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.dll.config
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\ArtClubActivityManagement.pdb
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\Newtonsoft.Json.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Linq.Dynamic.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Net.Http.Formatting.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Helpers.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.WebHost.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Mvc.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Razor.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Deployment.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Razor.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\Unit.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\Newtonsoft.Json.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Net.Http.Formatting.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Http.WebHost.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Razor.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Deployment.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Webpages.Razor.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Helpers.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\bin\System.Web.Mvc.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.csprojResolveAssemblyReference.cache
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\ArtClubActivityManagement\obj\Debug\ArtClubActivityManagement.pdb

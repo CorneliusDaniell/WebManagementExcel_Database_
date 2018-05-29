@@ -1,0 +1,98 @@
+﻿@model WebManagementExcelDatabase.Agentii_Table
+
+@{
+    ViewBag.Title = "Details";
+    if (this.User.IsInRole("Administrator"))
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Agentii_Table</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Agentie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agentie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intrare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intrare)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iesire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iesire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Explicatii)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Explicatii)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataOra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataOra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UltimaOp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UltimaOp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zile)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NrCrt }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

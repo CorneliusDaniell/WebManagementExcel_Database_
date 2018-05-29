@@ -1,0 +1,128 @@
+﻿@model List<WebManagementExcelDatabase.Agentii_Table>
+
+@{
+    var grid = new WebGrid(canPage: true, rowsPerPage: 10);
+    grid.Bind(source: Model, rowCount: ViewBag.TotalRows, autoSortAndPage: false);
+    if (this.User.IsInRole("Administrator"))
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<script src="~/Scripts/app.js"></script>
+
+<body ng-app="MyApp">
+
+    <div ng-controller="MyController" class="container" style="margin-top:75px;">
+        <div class="form-inline">
+            <input type="file" name="file" class="form-control"
+                   onchange="angular.element(this).scope().UploadFile(this.files)" />
+            <input type="button" value="Import" class="btn btn-success" ng-disabled="!SelectedFileForUpload"
+                   ng-click="ParseExcelDataAndSave()" />
+            <br />
+            <span style="color:red">
+                {{Message}}
+            </span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Lista Agentii</h2>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">Search</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    @using (Html.BeginForm("../Agentii/Index", "Eveniment", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+                    {
+                        <div class="form-group">
+                            <input type="text" name="search" value="@ViewBag.search" class="form-control" placeholder="search" />
+                        </div>
+                        <button type="submit" value="Search" class="btn btn-success">Search</button>
+                    }
+
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            @grid.Table(
+                tableStyle: "table table-responsive table-bordered",
+                columns: grid.Columns(
+                             grid.Column(columnName: "Agentie", header: "Agentie"),
+                             grid.Column(columnName: "Intrare", header: "Intrare"),
+                             grid.Column(columnName: "Iesire", header: "Iesire"),
+                             grid.Column(columnName: "Explicatii", header: "Expicatii"),
+                             grid.Column(columnName: "Operator", header: "Operator"),
+                             grid.Column(columnName: "DataOra", header: "DataOra"),
+                             grid.Column(columnName: "Sold", header: "Sold"),
+                             grid.Column(columnName: "UltimaOp", header: "UltimaOp"),
+                             grid.Column(columnName: "Zile", header: "Zile"),
+                                      grid.Column("Alege optiune:", format:
+                                    @<text>
+                                        @Html.ActionLink("Edit", "../Agentii/Edit", new { id = item.NrCrt }) |
+                                        @Html.ActionLink("Details", "../Agentii/Details", new { id = item.NrCrt }) |
+                                        @Html.ActionLink("Delete", "../Agentii/Delete", new { id = item.NrCrt })
+                                    </text>, style: "col3Width", canSort: false)
+
+                                                                                         )
+
+                                                                                      )
+            <p>
+                @Html.ActionLink("Create New", "../Agentii/Create")
+            </p>
+
+
+
+
+            <div class="row">
+                <div class="col-sm-6">
+
+                    @grid.PagerList(mode: WebGridPagerModes.All, paginationStyle: "pagination pagination-small pagination-right")
+                </div>
+            </div>
+
+            @Html.Hidden("dir", grid.SortDirection)
+            @Html.Hidden("col", grid.SortColumn)
+
+        </div>
+
+
+    </div>
+    <script src="~/Scripts/jquery-3.1.1.js"></script> <!grid>
+    <script src="~/Scripts/bootstrap.min.js"></script> <!grid>
+    <script>
+        $(function () {
+            try {
+                var dir = $('#dir').val();
+                var col = $('#col').val();
+                var header = $("th a[href*=" + col + "]");
+                if (dir == "Ascending") {
+                    header.text(header.text() + "  ?")
+                }
+                if (dir == "Descending") {
+                    header.text(header.text() + "  ?");
+                }
+
+            } catch (e) {
+
+            }
+        })
+    </script>
+
+
+
+    <div class="container">
+        Export Data : @Html.ActionLink("Excel", "GetExcel", "Agentii")
+    </div>
+
+    <script>
+        $('#membri').addClass('active');
+    </script>
+</body>
+</html>

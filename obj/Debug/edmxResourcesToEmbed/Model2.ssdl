@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArtClubModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BalantaContClub">
+    <Key>
+      <PropertyRef Name="ID_BalantaContClub" />
+    </Key>
+    <Property Name="ID_BalantaContClub" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Plata" Type="int" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_DataCalendarDisp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CalendarDisp">
+    <Key>
+      <PropertyRef Name="ID_DataCalenarDisp" />
+    </Key>
+    <Property Name="ID_DataCalenarDisp" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Eveniment">
+    <Key>
+      <PropertyRef Name="ID_NumeEveniment" />
+    </Key>
+    <Property Name="ID_NumeEveniment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NumeResursa" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_Username" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Functie">
+    <Key>
+      <PropertyRef Name="ID_NumeFunctie" />
+    </Key>
+    <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locatii">
+    <Key>
+      <PropertyRef Name="ID_NumeLocatie" />
+    </Key>
+    <Property Name="ID_NumeLocatie" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Membrii">
+    <Key>
+      <PropertyRef Name="ID_Username" />
+    </Key>
+    <Property Name="ID_Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Parola" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_NumeEveniment" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Resurse">
+    <Key>
+      <PropertyRef Name="ID_NumeResursa" />
+    </Key>
+    <Property Name="ID_NumeResursa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Locatie" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_DataCalendarDisp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="ID_NumeStatus" />
+    </Key>
+    <Property Name="ID_NumeStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ArtClubModelStoreContainer">
+    <EntitySet Name="BalantaContClub" EntityType="Self.BalantaContClub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CalendarDisp" EntityType="Self.CalendarDisp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eveniment" EntityType="Self.Eveniment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Functie" EntityType="Self.Functie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locatii" EntityType="Self.Locatii" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Membrii" EntityType="Self.Membrii" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resurse" EntityType="Self.Resurse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

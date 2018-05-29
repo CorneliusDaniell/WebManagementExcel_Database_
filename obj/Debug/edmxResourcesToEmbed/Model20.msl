@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArtClubModelStoreContainer" CdmEntityContainer="ArtClubEntities20">
+    <EntitySetMapping Name="BalantaContClubs">
+      <EntityTypeMapping TypeName="ArtClubModel.BalantaContClub">
+        <MappingFragment StoreEntitySet="BalantaContClub">
+          <ScalarProperty Name="ID_BalantaContClub" ColumnName="ID_BalantaContClub" />
+          <ScalarProperty Name="ID_Username" ColumnName="ID_Username" />
+          <ScalarProperty Name="ID_NumeEveniment" ColumnName="ID_NumeEveniment" />
+          <ScalarProperty Name="ID_NumeResursaResursa" ColumnName="ID_NumeResursaResursa" />
+          <ScalarProperty Name="ID_Data" ColumnName="ID_Data" />
+          <ScalarProperty Name="Zile" ColumnName="Zile" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Functie" ColumnName="Functie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eveniments">
+      <EntityTypeMapping TypeName="ArtClubModel.Eveniment">
+        <MappingFragment StoreEntitySet="Eveniment">
+          <ScalarProperty Name="ID_NumeEveniment" ColumnName="ID_NumeEveniment" />
+          <ScalarProperty Name="ID_NumeResursa" ColumnName="ID_NumeResursa" />
+          <ScalarProperty Name="NumarZile" ColumnName="NumarZile" />
+          <ScalarProperty Name="ID_Data" ColumnName="ID_Data" />
+          <ScalarProperty Name="Ora" ColumnName="Ora" />
+          <ScalarProperty Name="ID_TipPlata" ColumnName="ID_TipPlata" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Functies">
+      <EntityTypeMapping TypeName="ArtClubModel.Functie">
+        <MappingFragment StoreEntitySet="Functie">
+          <ScalarProperty Name="ID_NumeFunctie" ColumnName="ID_NumeFunctie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locaties">
+      <EntityTypeMapping TypeName="ArtClubModel.Locatie">
+        <MappingFragment StoreEntitySet="Locatie">
+          <ScalarProperty Name="ID_Locatie" ColumnName="ID_Locatie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Membriis">
+      <EntityTypeMapping TypeName="ArtClubModel.Membrii">
+        <MappingFragment StoreEntitySet="Membrii">
+          <ScalarProperty Name="ID_Username" ColumnName="ID_Username" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Parola" ColumnName="Parola" />
+          <ScalarProperty Name="ID_NumeFunctie" ColumnName="ID_NumeFunctie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resurses">
+      <EntityTypeMapping TypeName="ArtClubModel.Resurse">
+        <MappingFragment StoreEntitySet="Resurse">
+          <ScalarProperty Name="ID_NumeResursa" ColumnName="ID_NumeResursa" />
+          <ScalarProperty Name="ID_Locatie" ColumnName="ID_Locatie" />
+          <ScalarProperty Name="CostZi" ColumnName="CostZi" />
+          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="ArtClubModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ArtClubModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EvenimenteleMembrului" TypeName="ArtClubModel.EvenimenteleMembrului" StoreEntitySet="EvenimenteleMembrului">
+      <EndProperty Name="Eveniment">
+        <ScalarProperty Name="ID_NumeEveniment" ColumnName="ID_NumeEveniment" />
+      </EndProperty>
+      <EndProperty Name="Membrii">
+        <ScalarProperty Name="ID_Username" ColumnName="ID_Username" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

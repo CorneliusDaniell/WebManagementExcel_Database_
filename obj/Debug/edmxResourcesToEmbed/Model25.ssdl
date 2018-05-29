@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Agentii2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agentii_Table">
+    <Key>
+      <PropertyRef Name="NrCrt" />
+    </Key>
+    <Property Name="NrCrt" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Agentie" Type="nvarchar" MaxLength="50" />
+    <Property Name="Intrare" Type="nvarchar" MaxLength="50" />
+    <Property Name="Iesire" Type="nvarchar" MaxLength="50" />
+    <Property Name="Explicatii" Type="nvarchar" MaxLength="50" />
+    <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataOra" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sold" Type="nvarchar" MaxLength="50" />
+    <Property Name="UltimaOp" Type="nvarchar" MaxLength="50" />
+    <Property Name="Zile" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Functie">
+    <Key>
+      <PropertyRef Name="ID_NumeFunctie" />
+    </Key>
+    <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Membrii">
+    <Key>
+      <PropertyRef Name="ID_Username" />
+    </Key>
+    <Property Name="ID_Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Parola" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Membrii_Functie">
+    <End Role="Functie" Type="Self.Functie" Multiplicity="0..1" />
+    <End Role="Membrii" Type="Self.Membrii" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Functie">
+        <PropertyRef Name="ID_NumeFunctie" />
+      </Principal>
+      <Dependent Role="Membrii">
+        <PropertyRef Name="ID_NumeFunctie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Agentii2ModelStoreContainer">
+    <EntitySet Name="Agentii_Table" EntityType="Self.Agentii_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Functie" EntityType="Self.Functie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Membrii" EntityType="Self.Membrii" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Membrii_Functie" Association="Self.FK_Membrii_Functie">
+      <End Role="Functie" EntitySet="Functie" />
+      <End Role="Membrii" EntitySet="Membrii" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

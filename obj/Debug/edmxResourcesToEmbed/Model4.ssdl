@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArtClubModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BalantaContClub">
+    <Key>
+      <PropertyRef Name="ID_BalantaContClub" />
+    </Key>
+    <Property Name="ID_BalantaContClub" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Functie" Type="nvarchar" MaxLength="50" />
+    <Property Name="Suma" Type="nvarchar" MaxLength="50" />
+    <Property Name="Eveniment" Type="nvarchar" MaxLength="50" />
+    <Property Name="Resursa" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataCalendar" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CalendarDisp">
+    <Key>
+      <PropertyRef Name="ID_DataCalenarDisp" />
+    </Key>
+    <Property Name="ID_DataCalenarDisp" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Eveniment">
+    <Key>
+      <PropertyRef Name="ID_NumeEveniment" />
+    </Key>
+    <Property Name="ID_NumeEveniment" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NumeResursa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_DataCalendarDisp" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_TipPlata" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EvenimenteleMembrului">
+    <Key>
+      <PropertyRef Name="ID_Username" />
+      <PropertyRef Name="ID_NumeEveniment" />
+    </Key>
+    <Property Name="ID_Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NumeEveniment" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Functie">
+    <Key>
+      <PropertyRef Name="ID_NumeFunctie" />
+    </Key>
+    <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locatii">
+    <Key>
+      <PropertyRef Name="ID_NumeLocatie" />
+    </Key>
+    <Property Name="ID_NumeLocatie" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Membrii">
+    <Key>
+      <PropertyRef Name="ID_Username" />
+    </Key>
+    <Property Name="ID_Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Parola" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Resurse">
+    <Key>
+      <PropertyRef Name="ID_NumeResursa" />
+      <PropertyRef Name="ID_Locatie" />
+      <PropertyRef Name="ID_DataCalendarDisp" />
+    </Key>
+    <Property Name="ID_NumeResursa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Locatie" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_DataCalendarDisp" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResurseEveniment">
+    <Key>
+      <PropertyRef Name="ID_NumeResurse" />
+    </Key>
+    <Property Name="ID_NumeResurse" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="ID_NumeStatus" />
+    </Key>
+    <Property Name="ID_NumeStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TipPlata">
+    <Key>
+      <PropertyRef Name="ID_TipPlata" />
+    </Key>
+    <Property Name="ID_TipPlata" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CalendarDisp_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="CalendarDisp" Type="Self.CalendarDisp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID_NumeStatus" />
+      </Principal>
+      <Dependent Role="CalendarDisp">
+        <PropertyRef Name="ID_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eveniment_CalendarDisp">
+    <End Role="CalendarDisp" Type="Self.CalendarDisp" Multiplicity="1" />
+    <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CalendarDisp">
+        <PropertyRef Name="ID_DataCalenarDisp" />
+      </Principal>
+      <Dependent Role="Eveniment">
+        <PropertyRef Name="ID_DataCalendarDisp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eveniment_Membrii">
+    <End Role="Membrii" Type="Self.Membrii" Multiplicity="1" />
+    <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Membrii">
+        <PropertyRef Name="ID_Username" />
+      </Principal>
+      <Dependent Role="Eveniment">
+        <PropertyRef Name="ID_Username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eveniment_ResurseEveniment">
+    <End Role="ResurseEveniment" Type="Self.ResurseEveniment" Multiplicity="1" />
+    <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResurseEveniment">
+        <PropertyRef Name="ID_NumeResurse" />
+      </Principal>
+      <Dependent Role="Eveniment">
+        <PropertyRef Name="ID_NumeResursa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eveniment_TipPlata">
+    <End Role="TipPlata" Type="Self.TipPlata" Multiplicity="1" />
+    <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipPlata">
+        <PropertyRef Name="ID_TipPlata" />
+      </Principal>
+      <Dependent Role="Eveniment">
+        <PropertyRef Name="ID_TipPlata" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EvenimenteleMembrului_Eveniment">
+    <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="1" />
+    <End Role="EvenimenteleMembrului" Type="Self.EvenimenteleMembrului" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eveniment">
+        <PropertyRef Name="ID_NumeEveniment" />
+      </Principal>
+      <Dependent Role="EvenimenteleMembrului">
+        <PropertyRef Name="ID_NumeEveniment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EvenimenteleMembrului_Membrii">
+    <End Role="Membrii" Type="Self.Membrii" Multiplicity="1" />
+    <End Role="EvenimenteleMembrului" Type="Self.EvenimenteleMembrului" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Membrii">
+        <PropertyRef Name="ID_Username" />
+      </Principal>
+      <Dependent Role="EvenimenteleMembrului">
+        <PropertyRef Name="ID_Username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Membrii_Functie">
+    <End Role="Functie" Type="Self.Functie" Multiplicity="0..1" />
+    <End Role="Membrii" Type="Self.Membrii" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Functie">
+        <PropertyRef Name="ID_NumeFunctie" />
+      </Principal>
+      <Dependent Role="Membrii">
+        <PropertyRef Name="ID_NumeFunctie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resurse_CalendarDisp">
+    <End Role="CalendarDisp" Type="Self.CalendarDisp" Multiplicity="1" />
+    <End Role="Resurse" Type="Self.Resurse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CalendarDisp">
+        <PropertyRef Name="ID_DataCalenarDisp" />
+      </Principal>
+      <Dependent Role="Resurse">
+        <PropertyRef Name="ID_DataCalendarDisp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resurse_Locatii">
+    <End Role="Locatii" Type="Self.Locatii" Multiplicity="1" />
+    <End Role="Resurse" Type="Self.Resurse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locatii">
+        <PropertyRef Name="ID_NumeLocatie" />
+      </Principal>
+      <Dependent Role="Resurse">
+        <PropertyRef Name="ID_Locatie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resurse_ResurseEveniment">
+    <End Role="ResurseEveniment" Type="Self.ResurseEveniment" Multiplicity="1" />
+    <End Role="Resurse" Type="Self.Resurse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResurseEveniment">
+        <PropertyRef Name="ID_NumeResurse" />
+      </Principal>
+      <Dependent Role="Resurse">
+        <PropertyRef Name="ID_NumeResursa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ArtClubModelStoreContainer">
+    <EntitySet Name="BalantaContClub" EntityType="Self.BalantaContClub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CalendarDisp" EntityType="Self.CalendarDisp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eveniment" EntityType="Self.Eveniment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EvenimenteleMembrului" EntityType="Self.EvenimenteleMembrului" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Functie" EntityType="Self.Functie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locatii" EntityType="Self.Locatii" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Membrii" EntityType="Self.Membrii" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resurse" EntityType="Self.Resurse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResurseEveniment" EntityType="Self.ResurseEveniment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipPlata" EntityType="Self.TipPlata" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CalendarDisp_Status" Association="Self.FK_CalendarDisp_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="CalendarDisp" EntitySet="CalendarDisp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eveniment_CalendarDisp" Association="Self.FK_Eveniment_CalendarDisp">
+      <End Role="CalendarDisp" EntitySet="CalendarDisp" />
+      <End Role="Eveniment" EntitySet="Eveniment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eveniment_Membrii" Association="Self.FK_Eveniment_Membrii">
+      <End Role="Membrii" EntitySet="Membrii" />
+      <End Role="Eveniment" EntitySet="Eveniment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eveniment_ResurseEveniment" Association="Self.FK_Eveniment_ResurseEveniment">
+      <End Role="ResurseEveniment" EntitySet="ResurseEveniment" />
+      <End Role="Eveniment" EntitySet="Eveniment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eveniment_TipPlata" Association="Self.FK_Eveniment_TipPlata">
+      <End Role="TipPlata" EntitySet="TipPlata" />
+      <End Role="Eveniment" EntitySet="Eveniment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EvenimenteleMembrului_Eveniment" Association="Self.FK_EvenimenteleMembrului_Eveniment">
+      <End Role="Eveniment" EntitySet="Eveniment" />
+      <End Role="EvenimenteleMembrului" EntitySet="EvenimenteleMembrului" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EvenimenteleMembrului_Membrii" Association="Self.FK_EvenimenteleMembrului_Membrii">
+      <End Role="Membrii" EntitySet="Membrii" />
+      <End Role="EvenimenteleMembrului" EntitySet="EvenimenteleMembrului" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Membrii_Functie" Association="Self.FK_Membrii_Functie">
+      <End Role="Functie" EntitySet="Functie" />
+      <End Role="Membrii" EntitySet="Membrii" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resurse_CalendarDisp" Association="Self.FK_Resurse_CalendarDisp">
+      <End Role="CalendarDisp" EntitySet="CalendarDisp" />
+      <End Role="Resurse" EntitySet="Resurse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resurse_Locatii" Association="Self.FK_Resurse_Locatii">
+      <End Role="Locatii" EntitySet="Locatii" />
+      <End Role="Resurse" EntitySet="Resurse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resurse_ResurseEveniment" Association="Self.FK_Resurse_ResurseEveniment">
+      <End Role="ResurseEveniment" EntitySet="ResurseEveniment" />
+      <End Role="Resurse" EntitySet="Resurse" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
