@@ -5,15 +5,15 @@
       <PropertyRef Name="NrCrt" />
     </Key>
     <Property Name="NrCrt" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Agentie" Type="nvarchar" MaxLength="50" />
-    <Property Name="Intrare" Type="nvarchar" MaxLength="50" />
-    <Property Name="Iesire" Type="nvarchar" MaxLength="50" />
-    <Property Name="Explicatii" Type="nvarchar" MaxLength="50" />
-    <Property Name="Operator" Type="nvarchar" MaxLength="50" />
-    <Property Name="DataOra" Type="nvarchar" MaxLength="50" />
-    <Property Name="Sold" Type="nvarchar" MaxLength="50" />
-    <Property Name="UltimaOp" Type="nvarchar" MaxLength="50" />
-    <Property Name="Zile" Type="nvarchar" MaxLength="50" />
+    <Property Name="Agentie" Type="nvarchar" MaxLength="200" />
+    <Property Name="Intrare" Type="nvarchar" MaxLength="200" />
+    <Property Name="Iesire" Type="nvarchar" MaxLength="200" />
+    <Property Name="Explicatii" Type="nvarchar" MaxLength="200" />
+    <Property Name="Operator" Type="nvarchar" MaxLength="200" />
+    <Property Name="DataOra" Type="nvarchar" MaxLength="200" />
+    <Property Name="Sold" Type="nvarchar" MaxLength="200" />
+    <Property Name="UltimaOp" Type="nvarchar" MaxLength="200" />
+    <Property Name="Zile" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="Functie">
     <Key>

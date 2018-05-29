@@ -5,15 +5,15 @@
       <PropertyRef Name="NrCrt" />
     </Key>
     <Property Name="NrCrt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Agentie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Intrare" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Iesire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Explicatii" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DataOra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Sold" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="UltimaOp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Zile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Agentie" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Intrare" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Iesire" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Explicatii" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Operator" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DataOra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Sold" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UltimaOp" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Zile" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Functie">
     <Key>

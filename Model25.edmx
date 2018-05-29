@@ -4,21 +4,21 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Agentii2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Agentii2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Agentii_Table">
           <Key>
             <PropertyRef Name="NrCrt" />
           </Key>
           <Property Name="NrCrt" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Agentie" Type="nvarchar" MaxLength="50" />
-          <Property Name="Intrare" Type="nvarchar" MaxLength="50" />
-          <Property Name="Iesire" Type="nvarchar" MaxLength="50" />
-          <Property Name="Explicatii" Type="nvarchar" MaxLength="50" />
-          <Property Name="Operator" Type="nvarchar" MaxLength="50" />
-          <Property Name="DataOra" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sold" Type="nvarchar" MaxLength="50" />
-          <Property Name="UltimaOp" Type="nvarchar" MaxLength="50" />
-          <Property Name="Zile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Agentie" Type="nvarchar" MaxLength="200" />
+          <Property Name="Intrare" Type="nvarchar" MaxLength="200" />
+          <Property Name="Iesire" Type="nvarchar" MaxLength="200" />
+          <Property Name="Explicatii" Type="nvarchar" MaxLength="200" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="200" />
+          <Property Name="DataOra" Type="nvarchar" MaxLength="200" />
+          <Property Name="Sold" Type="nvarchar" MaxLength="200" />
+          <Property Name="UltimaOp" Type="nvarchar" MaxLength="200" />
+          <Property Name="Zile" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Functie">
           <Key>
@@ -69,8 +69,7 @@
             <End Role="Membrii" EntitySet="Membrii" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Agentii2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -79,15 +78,15 @@
             <PropertyRef Name="NrCrt" />
           </Key>
           <Property Name="NrCrt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Agentie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Intrare" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Iesire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Explicatii" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DataOra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sold" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UltimaOp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Zile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Agentie" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Intrare" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Iesire" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Explicatii" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Operator" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DataOra" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Sold" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UltimaOp" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Zile" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Functie">
           <Key>

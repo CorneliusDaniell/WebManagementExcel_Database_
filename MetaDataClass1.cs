@@ -18,8 +18,8 @@ namespace WebManagementExcelDatabase
         [Display(Name = "Parola")]
         public string Password { get; set; }
         [Required(ErrorMessage = "Completati campul", AllowEmptyStrings = false)]
-        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         [Compare("Password", ErrorMessage = "Parola nu se potriveste!!!")]
+        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         [Display(Name = "Repeta Parola")]
         public string RPassword { get; set; }
         [Required(ErrorMessage = "Completati campul", AllowEmptyStrings = false)]
